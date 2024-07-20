@@ -1,0 +1,125 @@
+*{
+    word-wrap: break-word;
+}
+body{
+    overflow-x: hidden;
+    @include font-applying(
+        $fs: 14px,
+        $ff: $font_text,
+        $fw: normal,
+        $fsty: normal
+    );
+    color: $primary_color;
+}
+a{
+    text-decoration: none;
+}
+strong{
+    font-family: $font_bold;
+}
+input:focus, select:focus, button:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+.container {
+    max-width: 1194px;
+}
+.inner-wrapper{
+    max-width: 950px;
+    width: 100%;
+    margin: 0 auto;
+}
+.error{
+    color: red;
+    margin: 3px 0 0;
+    font-size: 14px;
+}
+.div-flex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.main-head{
+    text-align: center;
+    @include font-applying(70px, $font_heading);
+    color: $new_primary_color;
+}
+.sub-head{
+    @include font-applying(43px, $font_heading);
+    color: $new_primary_color;
+    text-transform: uppercase;
+}
+.general-btn{
+    @include font-applying(13px, $font_text, 700);
+    color: $primary_color;
+    padding: 5px 5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid $primary_color;
+    transition: 0.5s;
+
+    &:hover{ 
+        color: $black;
+    }
+}
+
+.cms-main{
+    margin: 90px 0 90px;
+    @include font-applying(15px, $font_text);
+    color: $primary_color;
+
+    h1{
+        @include font-applying(58px, $font_heading);
+        color: $primary_color;
+        margin-bottom: 45px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    h3{
+        @include font-applying(20px, $font_heading, bold);
+        color: $primary_color;
+        margin-bottom: 15px;
+    }
+    p{
+        margin-bottom: 25px;
+    }
+    a{
+        color: $primary_color;
+
+        &:hover{
+            color: $black;
+        }
+    }
+}
+// responsive
+@include xs{
+    .cms-main{
+        margin: 50px 0;
+        h1 {
+            font-size: 25px;
+            font-weight: 700;
+        }
+    }
+} 
+@include sm{
+    .cms-main{
+        margin: 60px 0;
+        h1 {
+            font-size: 35px;
+        }
+    }
+}
+@include md{
+    .cms-main{
+        margin: 80px 0;
+        h1 {
+            font-size: 40px;
+        }
+    }
+}
+@include lg{
+    .cms-main h1 {
+        font-size: 50px;
+    }
+}

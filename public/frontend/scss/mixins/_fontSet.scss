@@ -1,0 +1,16 @@
+@mixin font-applying ($fs: 16px, $ff: $font_text, $fw: normal, $fsty:normal) {
+    font-size: $fs;
+    font-family: $ff;
+    font-weight: $fw;
+    font-style: $fsty;
+}
+
+@mixin custom-font ($fs: 16px, $fcolor: $text_color, $fw: normal, $fsty: normal, $ff: $font_text) {
+    font: {
+        family: $ff;
+        size: $fs;
+        weight: $fw;
+        style: $fsty;
+    }
+    color: $fcolor;
+}

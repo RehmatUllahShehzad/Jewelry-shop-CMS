@@ -1,0 +1,82 @@
+//    Responsive Settings Starts 
+
+/*
+@mixin res($view) {
+   @media (min-width: map-get($resVar, $view)) {
+       @content;
+   }
+}
+*/
+
+// xtra Small screen resolution up to 575px
+@mixin xs {
+    @media screen and (max-width: $xsmallR) {
+        @content;
+    }
+}
+
+// small screen resolution up to 767px
+@mixin sm {
+    @media screen and (min-width: 576px ) and (max-width: $smallR) {
+        @content;
+    }
+}
+
+// medium screen resolution up to 991px
+@mixin md {
+    @media screen and (min-width: 768px ) and (max-width: $mediumR) {
+        @content;
+    }
+}
+
+// Large screen resolution up to 1199px
+@mixin lg {
+    @media screen and (min-width: 992px ) and (max-width: $largeR) {
+        @content;
+    }
+}
+
+// Xtra Large screen resolution 1200px and above
+@mixin xl {
+    @media screen and (min-width: $xlargeR) {
+        @content;
+    }
+}
+
+
+/* 
+ Usage
+ @include lg{
+    Put your CSS Here
+ }
+ */
+
+// Print Media Query
+@mixin print {
+    @media print {
+        @content;
+    }
+}
+
+
+/* 
+ Usage
+ @include print {
+    Put your CSS Here
+ }
+ */
+
+// Custom Media Query
+@mixin custom($minSize: map-get($customSize, minSize), $maxSize: map-get($customSize, maxSize)) {
+    @media screen and (min-width: $minSize) and (max-width: $maxSize) {
+        @content;
+    }
+}
+
+
+/*
+ Usage
+ @include custom(850px, 1190px){
+    Put your CSS Here
+ }
+ */

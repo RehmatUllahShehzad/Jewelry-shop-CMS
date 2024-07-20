@@ -1,0 +1,10 @@
+{
+    "exclude": [
+        "docker/",
+        ".docker/",
+        "public/",
+        "storage/",
+        "node_modules/",
+        "bootstrap/"
+    ]
+}
